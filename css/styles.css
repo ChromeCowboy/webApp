@@ -1,0 +1,978 @@
+
+  
+/***************************************/
+/********   Global    **************/
+/***************************************/
+
+* {
+ padding: 0;
+ margin: 0;
+}
+
+body {
+ font-family: 'Lato', sans-serif;
+ font-weight: 300;
+}
+
+/***************************************/
+/********   Header    **************/
+/***************************************/
+
+
+.grid-container {
+ display: grid;
+ grid-template-columns: 100%;
+ grid-template-rows: auto;
+ grid-template-areas: "header"
+                      "nav"
+                      "main";
+}
+
+.header {
+ grid-area: header;
+ height: 3.75rem;
+ margin: 0;
+ padding-top: .5rem;
+ background-color: rgb(92, 131, 216);
+}
+
+.main {
+ grid-area: main;
+ background-color: rgb(248, 248, 248);
+}
+
+.header-container {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ height: 3rem;
+}
+
+.member1 {
+ height: 2.5rem;
+ width: 2.5rem;
+ border-radius: 4rem;
+}
+
+.member-border {
+ border-left: 1px solid rgb(162, 162, 162);;
+ padding-left: .5rem;
+}
+
+.title,
+.app {
+ font-size: 1.5rem;
+ font-weight: 300;
+ color:rgb(240, 240, 240);
+}
+
+.tm {
+ font-size: .5rem;
+ margin-bottom: .75rem;
+ color:rgb(240, 240, 240);
+}
+
+.student {
+ font-size: .75rem;
+ padding-left: .5rem;
+ width: 5rem;
+ color:rgb(240, 240, 240);
+ font-weight: 300;
+}
+
+.left-header {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ margin-left: .5rem;
+}
+
+.right-header{
+ display: flex;
+ align-items: center;
+ margin-right: .5rem;
+}
+
+.bell-container {
+ justify-content: space-between;
+}
+
+.bell {
+ display: flex;
+}
+
+::marker {
+ border-radius:45px;
+ color:#80ca8f;
+}
+
+.bell-icon {
+ margin: .5rem 1rem 0 0;
+ fill:rgb(240, 240, 240);
+ transition: transform .3s ease-in;
+ transform-origin: 50% 50%;
+}
+
+.bell-icon:hover {
+  transform: scale(1.2);
+}
+
+/***************************************/
+/********   Nav    **************/
+/***************************************/
+
+.nav {
+ display: flex;
+ justify-content: center;
+ background-color: rgb(54, 74, 138);
+}
+
+.nav a {
+ width: 10%;
+ margin: .5rem 1rem;
+}
+
+/***************************************/
+/********   Main    **************/
+/***************************************/
+
+.tab {
+ display:flex;
+ background-color: rgb(232, 232, 232);
+}
+
+.headline {
+ margin: 0;
+ padding: 1rem;
+ background-color: rgb(248, 248, 248);
+ font-weight: 400;
+}
+
+.main-header-search {
+ display: none;
+}
+
+/***************************************/
+/********   Alert    **************/
+/***************************************/
+
+.alert-container {
+  display:flex;
+  justify-content: space-around;
+  align-items: baseline;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  padding: .5rem;
+  width: 80%;
+  border-radius:1rem;
+  color: rgb(240, 240, 240);
+  background-color: rgb(92, 131, 216);
+}
+
+.alert-banner-close {
+ color:rgb(240, 240, 240);
+ background-color: transparent;
+ border: none;
+}
+
+/***************************************/
+/********   Horizontal Rule    **************/
+/***************************************/
+
+hr {
+ margin-top: 1rem;
+ border: 1px solid rgb(218, 218, 218);
+}
+
+
+/***************************************/
+/********   Headlines    **************/
+/***************************************/
+
+.traffic-header h3,
+.daily h3,
+.mobile-users h3,
+.social-stats h3,
+.members h3,
+.recent-activity h3,
+.message-user h3,
+.settings h3 {
+ margin: 1rem;
+ font-weight: 400;
+}
+
+/***************************************/
+/********   Traffic    **************/
+/***************************************/
+
+.traffic-nav {
+ display: flex;
+ justify-content: center;
+}
+
+.traffic-nav-link {
+ display: flex;
+ padding: .5rem;
+}
+
+.active {
+ background-color: #80ca8f;
+ border-radius: 45px;
+ color: #fafdfb;
+}
+
+
+/***************************************/
+/********   Charts    **************/
+/***************************************/
+
+#trafficChart,
+#daily-chart,
+#doughnut-chart {
+ padding: 1rem;
+}
+
+#trafficChart {
+ height: 2rem;
+}
+
+canvas {
+ max-width: 100%;
+}
+
+/***************************************/
+/********   Social Stats    **************/
+/***************************************/
+
+.social-container {
+ display: flex;
+ flex-direction: column;
+}
+
+.social-stat-box {
+ background-color: #7477bf;
+ border-radius: 50%;
+ padding: 18px;
+}
+
+.facebook-icon,
+.instagram-icon,
+.twitter-icon {
+ background-color: rgb(92, 131, 216);
+ width: 4rem;
+ border-radius: 9rem;
+}
+
+.circle {
+  background-color: rgb(92, 131, 216);
+  fill:white;  
+}
+
+.social-stat-box {
+ display: flex;
+ margin: .25rem 1rem;
+ padding: 1rem;
+ border-radius: 1rem;
+ background-color: rgb(240, 240, 240);
+ border: 2px solid rgb(225, 224, 224);
+}
+
+.social-population {
+ font-size:2.2rem;
+ color: rgb(92, 92, 92); 
+}
+
+.social-text {
+ margin-left: 1rem;
+}
+
+.social-text p {
+ color:rgb(92, 131, 216);
+}
+
+
+/***************************************/
+/********   New Members    **************/
+/***************************************/
+
+.line {
+ padding-top: 1.5rem;
+ border-top: 2px solid rgb(225, 224, 224);
+}
+
+.transparent-line {
+   padding-top: 1.5rem;
+}
+
+.members a {
+ text-decoration: none;
+}
+
+.arrow {
+ display: none;
+}
+
+.box {
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+ margin: 0 1rem;
+}
+
+.date {
+  text-align: center;
+}
+
+.time {
+  text-align: center;
+}
+
+.hidden-time {
+  display: none;
+}
+
+.profile-image {
+ border-radius: 6rem;
+}
+
+.members-text-box img,
+.members-recent-activity img {
+ width: 40%;
+}
+
+.members-text-box,
+.members-recent-activity {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ margin: 1rem;
+ text-align: center;
+}
+
+
+/***************************************/
+/********   Message User    ************/
+/***************************************/
+
+.widget-container {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+}
+
+.second-alert-container {
+ margin-left: 1rem;
+ color: red;
+}
+
+.third-alert-container {
+ margin-left: 1rem;
+ color: green;
+}
+
+#userField,
+#messageField {
+ margin: .25rem 1rem;
+ width: 85%;
+ border: 1px solid rgb(181, 181, 181);
+ border-radius: .25rem;
+ background-color: rgb(240, 240, 240);
+}
+
+::placeholder {
+ color: rgb(201, 201, 201);
+}
+
+#userField {
+ padding: .5rem;
+}
+
+#messageField {
+ padding: .5rem;
+ height: 7rem;
+}
+
+
+/***************************************/
+/********   Settings    **************/
+/***************************************/
+
+.button-primary {
+ margin: 1rem;
+ padding: 1rem;
+ color: white;
+ border-radius: .5rem;
+ border: 1px solid rgb(181, 181, 181);
+ background-color:rgb(92, 131, 216);
+}
+
+.settings-container {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ grid-template-rows: 1.5fr 1fr;
+ text-align: left;
+ grid-template-areas: "switch-title-one switch-one"
+                      "switch-title-two switch-two";
+}
+
+.switch-one,
+.switch-two {
+ padding-left: 2rem;
+}
+
+.switch-one {
+ grid-area: switch-one;
+
+}
+
+.switch-two {
+ grid-area: switch-two;
+}
+
+.switch-ios.switch-light input:checked ~ span {
+ border-color: rgb(92, 131, 216);
+ box-shadow: inset 0 0 0 30px rgb(92, 131, 216);
+}
+
+.switch-title-one,
+.switch-title-two {
+ margin-left: 1rem;
+ width: 11rem;
+ font-weight: 200;
+}
+
+.switch-title-one {
+ grid-area: switch-title-one;
+}
+
+.switch-title-two {
+ grid-area: switch-title-two;
+}
+
+.switch-ios {
+ width: 5rem;
+}
+
+/***************************************/
+/********   Timezone    **************/
+/***************************************/
+
+.timezone {
+ margin: 2rem 1rem 0 1rem;
+ width: 90%;
+ height: 3rem;
+ border-radius: .5rem;
+ color:rgb(146, 146, 146);
+ background-color: rgb(240, 240, 240);
+ border: 2px solid rgb(218, 218, 218);
+}
+
+
+/***************************************/
+/********   Save/Cancel Buttons  *******/
+/***************************************/
+
+.save-container {
+ display: flex;
+ margin:auto;
+}
+
+.save-cancel-buttons {
+ display: flex;
+ margin: auto;
+ flex-direction: row;
+ align-items: center;
+}
+
+.save-button {
+ background-color:rgb(92, 131, 216);
+}
+
+.cancel-button {
+ background-color:rgb(181, 181, 181);
+}
+
+.save-button,
+.cancel-button {
+ display: flex;
+ justify-content: center;
+ padding: 1rem;
+ margin: 2rem .5rem 2rem .5rem;
+ height: 3.5rem;
+ width: 8.5rem;
+ border-radius: .5rem;
+ border: 1px solid rgb(208, 208, 208);
+ color: white;
+}
+
+
+
+
+/***********************************************************************************************************/
+/*******************************   Media Query 768  *******************************************************/
+/***********************************************************************************************************/
+
+@media (min-width: 768px) {
+
+/* Grid Layout */
+
+.grid-container {
+ grid-template-columns: 55px 1fr;
+ grid-template-areas: "header header"
+                      "nav main";
+  }
+
+.main{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-areas: 
+"main-header main-header"
+"alert alert"
+"traffic-grid traffic-grid"
+"daily mobile-users"
+"social-stats social-stats"
+"members members"
+"recent-activity recent-activity"
+"message-user message-user"
+"settings settings"
+}
+
+.main-header {
+ grid-area: main-header;
+ height: 4rem;
+}
+
+.alert {
+ grid-area: alert;
+}
+
+.traffic-grid {
+ grid-area: traffic-grid;
+}
+
+.social-stats {
+ grid-area: social-stats;
+}
+
+.daily {
+ grid-area: daily;
+}
+
+.mobile-users {
+ grid-area: mobile-users;
+ border-top: 2px solid rgb(218, 218, 218);
+}
+
+.members {
+ grid-area: members;
+}
+
+.recent-activity {
+ grid-area: recent-activity;
+}
+
+.message-user {
+ grid-area: message-user;
+}
+
+.settings {
+ grid-area: settings;
+}
+
+/***************************************/
+/********   Header    **************/
+/***************************************/
+
+.header-container {
+ justify-content: space-between;
+}
+
+.left-header {
+ margin-left: 1rem;
+}
+
+.right-header {
+ margin-right: 1rem;
+}
+
+.bell-icon {
+    margin-left: 25rem;
+}
+
+/***************************************/
+/********   Dashboard Tab    **************/
+/***************************************/
+
+.headline {
+  border-right: 2px solid rgb(218, 218, 218);
+   
+}
+
+/***************************************/
+/********   Nav Bar    **************/
+/***************************************/
+
+.nav {
+ grid-area: nav;
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ background-color: rgb(54, 74, 138);
+}
+
+.nav a {
+ width: 63%;
+ margin: .5rem;
+}
+
+
+/***************************************/
+/********   Alert Message    ***********/
+/***************************************/
+
+.alert-container {
+  justify-content: space-between;
+  width: 91%;
+  margin-bottom: 1rem;
+}
+
+
+/***************************************/
+/********   Traffic Nav    **************/
+/***************************************/
+
+.horizon-rule {
+ display:none;
+}
+
+.recent-activity {
+ margin-top: 1rem;
+ border-top: 2px solid rgb(218, 218, 218);
+}
+
+.traffic-nav {
+ grid-area: traffic-nav;
+}
+
+.traffic-nav-link {
+ padding-right: .5rem;
+ padding-bottom: 0;
+}
+
+.traffic-header{
+ grid-area: traffic-header;
+ display: grid;
+ grid-template-columns: 1fr;
+ grid-template-areas: "traffic-header traffic-nav";
+ align-items: flex-end;
+ width: 97%;
+}
+
+.traffic-header h3 {
+  margin: 0 0 0 1rem;
+}
+
+.daily {
+ grid-area: daily;
+ border-top: 2px solid rgb(218, 218, 218);
+ border-right: 2px solid rgb(218, 218, 218);
+}
+
+/***************************************/
+/********   Social Stats    **************/
+/***************************************/
+
+.social-stats {
+ border-top: 2px solid rgb(218, 218, 218);
+}
+
+.social-container {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-evenly;
+}
+
+.social-population {
+ font-size: 1.9rem;
+}
+
+.social-stat-box {
+ display: flex;
+ margin: .25rem 1rem 1rem 1rem;
+ padding: 1rem;
+ border-radius: 1rem;
+ background-color: rgb(240, 240, 240);
+ border: 2px solid rgb(225, 224, 224);
+}
+
+/*****************************************************/
+/********   New Members/Recent Activity  **************/
+/*****************************************************/
+
+
+.members {
+ border-top: 2px solid rgb(218, 218, 218);
+}
+
+.line {
+ border-top: 0px solid rgb(225, 224, 224);
+}
+
+.members-text-box img {
+ width: 30%;
+}
+
+.members-recent-activity img {
+ width: 17%;
+}
+
+#dawn-profile-pic {
+  width: 16%;
+}
+
+#dan-profile-pic {
+ width: 21%;
+}
+
+.box,
+.members-container,
+.recent-activity-container {
+ display:flex;
+ flex-direction: column;
+}
+
+.arrow {
+ display: inline;
+ font-size: 1.5rem;
+ color: rgb(92, 131, 216);
+}
+
+.time {
+ display: none;
+}
+
+.hidden-time {
+  display: inline;
+}
+
+.box {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgb(218, 218, 218);
+    margin: 0 2rem;
+}
+
+.no-line {
+ border-bottom: transparent ;
+}
+
+.members-text-box,
+.members-recent-activity {
+ display: flex;
+ flex-direction: row;
+ margin: 1rem;
+ text-align: center;
+ padding: 1rem;
+ margin-right: 0;
+}
+
+.members-text-box p,
+.members-text-box a {
+ margin-left: 0rem;
+}
+
+.date {
+ margin-left: 15rem;
+}
+
+.grid-info {
+ display: flex;
+ align-self: center;
+ flex-direction: column;
+ align-items: flex-start;
+ margin-left: 1rem;
+}
+
+.members-recent-activity p {
+ margin-left: 0;
+}
+
+
+
+/***************************************/
+/********   Message User    **************/
+/***************************************/
+
+.message-user {
+ border-top: 2px solid rgb(218, 218, 218);
+}
+
+#userField,
+#messageField {
+ width: 93%;
+}
+
+/***************************************/
+/********   Settings    **************/
+/***************************************/
+
+.settings {
+ border-top: 2px solid rgb(218, 218, 218);
+}
+
+.settings-container {
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+}
+
+.switch-one,
+.switch-two {
+ padding-left: 0;
+}
+ 
+/***************************************/
+/********   Timezone    **************/
+/***************************************/
+
+.timezone {
+ width: 95%;
+}
+
+/***************************************/
+/********   Save/Cancel Buttons  *******/
+/***************************************/
+
+.save-button,
+.cancel-button {
+ width: 21rem;
+}
+
+}
+
+
+
+
+/***********************************************************************************************************/
+/*******************************   Media Query 1024  *******************************************************/
+/***********************************************************************************************************/
+
+@media (min-width: 1024px) {
+
+ .bell-icon {
+    margin-left: 40rem;
+ }
+
+ .main {
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-areas: 
+"main-header main-header"
+"alert alert"
+"traffic-grid traffic-grid"
+"daily mobile-users"
+"social-stats social-stats"
+"members recent-activity"
+"message-user settings";
+}
+
+.date {
+ margin-left: 1rem;
+}
+
+.social-population {
+ font-size: 2.5rem;
+}
+
+.recent-activity {
+ margin-top: 0;
+}
+
+.recent-activity p {
+ margin-left: 0;
+ text-align: left;
+}
+
+.push {
+ display: flex;
+ justify-content: center;
+}
+
+.arrow {
+ width: 3rem;
+ font-size: 2rem;
+}
+
+
+.members-recent-activity img {
+ width: 26%;
+}
+
+#dawn-profile-pic {
+  width: 26%;
+}
+
+#dan-profile-pic {
+ width: 27%;
+} 
+
+.members-text-box,
+.members-recent-activity {
+ display: flex;
+ margin: 0 1rem 1rem 0;
+ padding-left: 0;
+ text-align: center;
+}
+
+.members-recent-activity {
+ margin-bottom: 1rem;
+}
+
+.grid-info {
+ display: flex;
+ margin-left: .5rem;
+}
+
+.recent-activity {
+ border-top: 2px solid rgb(218, 218, 218);
+ border-left: 2px solid rgb(218, 218, 218);
+}
+
+
+#userField,
+#messageField {
+ width: 88%;
+}
+
+.button-primary{
+ width: 92%;
+ height: 3.5rem;
+}
+
+.settings {
+  border-left: 2px solid rgb(218, 218, 218);
+}
+.switch-one,
+.switch-two {
+ margin-left: 2rem;
+}
+
+.timezone {
+ width: 92%;
+ margin-top: 3rem;
+}
+
+.save-button,
+.cancel-button {
+ width: 13rem;
+ height: 3.5rem;
+ margin-top: 1.40rem;
+}
+
+.box,
+.members-container, 
+.recent-activity-container {
+ height: 40rem;
+}
+
+}
